@@ -19,6 +19,7 @@
   >
     Reset username
   </button>
-  <p>{{ serverCreationStatus }}</p>
+  <!-- <p>{{ serverCreationStatus }}</p> -->
+  <p *ngIf="serverCreated">Server is created, its name is: {{ serverName }}</p>
   <app-server></app-server>
 </div>
