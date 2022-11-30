@@ -22,4 +22,19 @@
   </button>
   <!-- <p>{{ serverCreationStatus }}</p> -->
   <app-server *ngFor="let server of servers"></app-server>
+  <button class="btn btn-primary" (click)="onShowDetails()">
+    Display details
+  </button>
+  <p *ngIf="showDetails">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga facere
+    laudantium odio quos, cupiditate nulla? Ex qui velit non, earum recusandae
+    voluptates. At in ea beatae autem, inventore quos dolorem.
+  </p>
+  <p
+    *ngFor="let logItem of logItems"
+    [ngStyle]="{ backgroundColor: logItem >= 5 ? 'blue' : 'transparent' }"
+    [ngClass]="{ 'white-text': logItem >= 5 }"
+  >
+    {{ logItem }}
+  </p>
 </div>

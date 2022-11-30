@@ -12,6 +12,9 @@ export class ServersComponent implements OnInit {
   userName: string = '';
   serverCreated: boolean = false;
   servers: string[] = ['Test Server 1', 'Test Server 2'];
+  showDetails: boolean = false;
+  countShowDetails: number = 0;
+  logItems: number[] = [];
 
   constructor() {
     setTimeout(() => {
@@ -34,5 +37,11 @@ export class ServersComponent implements OnInit {
 
   onResetUserName(): void {
     this.userName = '';
+  }
+
+  onShowDetails(): void {
+    this.showDetails = !this.showDetails;
+    this.countShowDetails++;
+    this.logItems.push(this.countShowDetails);
   }
 }
