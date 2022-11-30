@@ -1,0 +1,24 @@
+<div class="vertical-flex">
+  <label>Server name</label>
+  <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" /> -->
+  <input type="text" class="form-control" [(ngModel)]="serverName" />
+  <button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+  >
+    Add server
+  </button>
+  <label>Username</label>
+  <input type="text" class="form-control" [(ngModel)]="userName" />
+  <p>{{ userName }}</p>
+  <button
+    class="btn btn-primary"
+    [disabled]="!userName"
+    (click)="onResetUserName()"
+  >
+    Reset username
+  </button>
+  <p>{{ serverCreationStatus }}</p>
+  <app-server></app-server>
+</div>
