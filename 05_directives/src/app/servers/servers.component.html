@@ -9,6 +9,7 @@
   >
     Add server
   </button>
+  <p *ngIf="serverCreated">Server is created, its name is: {{ serverName }}</p>
   <label>Username</label>
   <input type="text" class="form-control" [(ngModel)]="userName" />
   <p>{{ userName }}</p>
@@ -20,6 +21,5 @@
     Reset username
   </button>
   <!-- <p>{{ serverCreationStatus }}</p> -->
-  <p *ngIf="serverCreated">Server is created, its name is: {{ serverName }}</p>
   <app-server></app-server>
 </div>
